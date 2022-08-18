@@ -12,23 +12,35 @@ Product.init(
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
+      allowNull: false
     },
     product_name: {
       type: DataTypes.STRING,
+      allowNull: false
     },
     price: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+      validate: {
+        isDecimal: true
+      }
     },
     stock: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      defaultValue: 10,
+      validate: {
+        isNumeric: true
+      }
     },
     category_id: {
       type: DataTypes.INTEGER,
-      // need something else here need to come back...foreign key? belongs to category??
+    references: {
+      model: 'category',
+      key: 'id'
     }
+  }
   },
   {
     sequelize,
