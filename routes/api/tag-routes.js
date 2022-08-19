@@ -75,8 +75,8 @@ router.delete('/:id', (req, res) => {
       id: req.params.id
     }
   })
-    .then((deleteCat) => {
-      res.json(deleteCat);
+    .then((deleteTag) => {
+      res.json(deleteTag);
     })
     .catch(err => {
       console.log(err)
