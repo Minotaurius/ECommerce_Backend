@@ -10,9 +10,9 @@ GET http://localhost:3001/api/tags/9
 POST http://localhost:3001/api/tags
 Content-Type: application/json
 
-    {
-      "tag_name": "Sale"
-    }
+{
+    "tag_name": "Sale"
+}
 
 ###
 // put tag - thumbs up

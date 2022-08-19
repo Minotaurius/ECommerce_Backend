@@ -20,11 +20,11 @@ Content-Type: application/json
 
 ###
 // put cat - 100%
-PUT http://localhost:3001/api/categories/6
+PUT http://localhost:3001/api/products/4
 Content-Type: application/json
 
 {
-    "category_name": "Books"
+    "product_name": "Books"
 }
 
 ###
