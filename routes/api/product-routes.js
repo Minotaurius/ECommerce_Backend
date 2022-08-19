@@ -2,20 +2,20 @@ const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // get all products
-router.get('/', (req, res) => {
+
 // find all products
+router.get('/', (req, res) => {
   Product.findAll({
-// be sure to include its associated Category and Tag data
+    // be sure to include its associated Category and Tag data
     include: [{
       model: Category,
-// be sure to include its associated Products
       attributes: ['category_name']
     },
     {
       model: Tag,
       attributes: ['tag_name']
     },
-  ]
+    ]
   })
     .then((prodData) => {
       res.json(prodData);
@@ -27,12 +27,11 @@ router.get('/', (req, res) => {
 
 // find a single product by its `id`
 router.get('/:id', (req, res) => {
-// get one product
   Product.findOne({
     where: {
       id: req.params.id
     },
-// be sure to include its associated Category and Tag data
+    // be sure to include its associated Category and Tag data
     include: [{
       model: Category,
       attributes: ['category_name']
@@ -124,19 +123,19 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// delete one product by its `id` value
 router.delete('/:id', (req, res) => {
-  // delete one product by its `id` value
   Product.destroy({
-    where: { 
-    id: req.params.id
-  }
+    where: {
+      id: req.params.id
+    }
   })
-  .then((deleteProd) => {
-    res.json(deleteProd);
-  })
-  .catch(err => {
-    console.log(err)
-  })
+    .then((deleteProd) => {
+      res.json(deleteProd);
+    })
+    .catch(err => {
+      console.log(err)
+    })
 });
 
 module.exports = router;

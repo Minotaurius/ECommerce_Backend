@@ -24,7 +24,7 @@ Content-Type: application/json
 }
 
 ###
-// delete tag - ?
+// delete tag - works
 
 DELETE http://localhost:3001/api/tags/9
 Content-Type: application/json
