@@ -13,3 +13,16 @@ Content-Type: application/json
 {
     "category_name": "Electronics"
 }
+
+###
+// put cat - 100%
+PUT http://localhost:3001/api/categories/6
+Content-Type: application/json
+
+{
+    "category_name": "Books"
+}
+
+###
+// delete cat - 100%
+DELETE http://localhost:3001/api/categories/6
