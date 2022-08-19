@@ -28,5 +28,5 @@ Content-Type: application/json
 }
 
 ###
-// delete cat - 100%
-DELETE http://localhost:3001/api/categories/6
+// delete prod - ?
+DELETE http://localhost:3001/api/products/6
