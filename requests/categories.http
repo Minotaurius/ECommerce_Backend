@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 
 ###
-// put cat - 100%
+// put cat - 100% works
 PUT http://localhost:3001/api/categories/6
 Content-Type: application/json
 

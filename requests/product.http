@@ -1,0 +1,32 @@
+// get all prods - works 100%
+GET http://localhost:3001/api/products
+
+###
+//get prod id - works
+GET http://localhost:3001/api/products/3
+
+###
+// post product - 100%
+POST http://localhost:3001/api/products
+Content-Type: application/json
+
+    {
+      "product_name": "Socks",
+      "price": 5, 
+      "stock": 100,
+      "tagIds": [1, 2, 3],
+      "category_id": 5
+    }
+
+###
+// put cat - 100%
+PUT http://localhost:3001/api/categories/6
+Content-Type: application/json
+
+{
+    "category_name": "Books"
+}
+
+###
+// delete cat - 100%
+DELETE http://localhost:3001/api/categories/6
