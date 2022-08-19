@@ -26,10 +26,10 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    // be sure to include its associated Product data
+// be sure to include its associated Product data
     include: {
       model: Product,
-      attributes: ['product_name', 'price', 'stock', 'category_id']
+      // attributes: ['product_name', 'price', 'stock', 'category_id']
     }
   })
     .then((idTag) => {
