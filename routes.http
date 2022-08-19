@@ -1,1 +1,15 @@
-GET http://localhost:3001/
+// get all cat - works 100%
+GET http://localhost:3001/api/categories
+
+###
+//get cat id - works 100%
+GET http://localhost:3001/api/categories/3
+
+###
+// post category - 100%
+POST http://localhost:3001/api/categories
+Content-Type: application/json
+
+{
+    "category_name": "Electronics"
+}
