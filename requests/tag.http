@@ -1,0 +1,31 @@
+// get all tag - works 100%
+GET http://localhost:3001/api/tags
+
+###
+//get id tag - works
+GET http://localhost:3001/api/tags/9
+
+###
+// post tag - 100% works
+POST http://localhost:3001/api/tags
+Content-Type: application/json
+
+    {
+      "tag_name": "Sale"
+    }
+
+###
+// put tag - thumbs up
+PUT http://localhost:3001/api/tags/9
+Content-Type: application/json
+
+{
+    "tag_name": "Discount"
+}
+
+###
+// delete tag - ?
+
+DELETE http://localhost:3001/api/tags/9
+Content-Type: application/json
+

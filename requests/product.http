@@ -29,4 +29,4 @@ Content-Type: application/json
 
 ###
 // delete prod - ?
-DELETE http://localhost:3001/api/products/6
+DELETE http://localhost:3001/api/products/
